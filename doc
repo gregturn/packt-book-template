@@ -1,0 +1,96 @@
+#!/usr/bin/env bash
+
+# Uncomment the following line to debug this script
+#set -x
+
+#####################################################################
+# INFO:
+#
+# Each file is pieced together as ${TITLE}_${module}_${ROUND}.adoc
+#####################################################################
+
+# TODO: Replace with your own title's designation
+TITLE="A001"
+
+# TODO: Put in all the chapters you need here, like "1 2 3 4 5 " etc. plus your extra chunks
+# NOTE: Using asciidoctor, it's possible to compile ONE final copy. Packt doesn't need this, but
+# YOU can enjoy it!
+modules="1 2 foreword preface index" 
+
+# TODO: When you transition to 
+ROUND="1stdraft"
+
+# TODO: Point it at YOUR copy asciidoctor-packt
+PATH_TO_PACKT_BACKEND="~/src/asciidoctor-packt"
+
+
+#
+# Turn the crank on generating chapters of your title.
+# - Will go into the folder of your chapter and prune code fragments to fit
+# - Will build both an HTML preview as well as an FODT stylized copy for Packt
+#
+build() {
+
+	echo "Inspecting fragments in $1..."
+
+	pushd $1
+
+	if [ "$(echo fragment*)" != 'fragment*' ]; then # Do any fragment*'s exist?
+		for i in $(ls fragment*); do
+			PROCESSED="processed_$i"
+			echo "Converting $i into $PROCESSED"
+			# TODO: Plug in any script you want to "trim" 
+			# my_script_to_convert < $i > $PROCESSED
+		done
+	fi;
+
+	# Convert 1 into 01, 2 into 02, but leave index, foreword, etc. alone
+	case $1 in
+    	''|*[!0-9]*) 	CHAPTER_NUMBER=$1 ;;
+    	*) 				CHAPTER_NUMBER=$(echo 00$1 | tail -c 3) ;;
+	esac
+
+	popd
+
+	DOC="${TITLE}_${CHAPTER_NUMBER}_${ROUND}"
+
+	echo "Building ${DOC}.html..."
+	asciidoctor -a allow-uri-read ${DOC}.adoc
+
+	echo "Building ${DOC}.fodt..."
+	asciidoctor --trace -T ${PATH_TO_PACKT_BACKEND}/slim -b packt -a allow-uri-read ${DOC}.adoc
+
+}
+
+if [ "$1" = "" ]; then
+	echo
+	echo "Usage: ./doc [all|1|2|foreword|preface|index]" # TODO: Revise the usage message with your chapter numbers
+	echo
+	exit
+elif [ "$1" = "all" ]; then
+	echo
+	echo "Building all chapters for <INSERT MY BOOK TITLE HERE>..."
+	echo
+
+	build "foreword"
+	build "preface"
+
+	for module in $modules
+	do
+		build $module
+	done
+
+	build "index"
+
+	exit
+elif [[ $modules =~ $1 ]]; then
+	echo
+	echo "$1 is a valid member of [$modules]. Building..."
+	echo
+	build $1
+else
+	echo
+	echo "'$1' is not a recognized option. Aborting."
+	echo
+    exit 1
+fi;

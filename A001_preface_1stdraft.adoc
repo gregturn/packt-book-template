@@ -1,0 +1,102 @@
+== DELETE ME
+
+=== Preface
+
+[verse, Graham Rivers-Brown, https://twitter.com/grahamrb/status/500422704499945472]
+Very impressed with blah blah blah!
+
+Something cool by Greg Turnquist....
+
+I hope you enjoy this experience.
+
+==== What this book covers
+
+...Rewrite summary of each chapter...
+
+* _Chapter 1 - Lorem ipsum_
+* _Chapter 2 - Ut enim ad minim veniam_
+
+==== What you need for this book
+
+Blah blah supports Lorum 8 or higher, but all code examples in this book are based on Lorum 8. 
+
+Parts of this book use http://rabbitmq.com[RabbitMQ] and http://www.mongodb.org[MongoDB].
+
+If you use a Mac, you might want to investigate http://brew.sh[Homebrew] as an alternative package manager for certain utilities used in this book.
+
+==== Who this book is for
+
+This book is aimed at blah blah blah.
+
+==== Conventions
+
+In this book, you will find a number of styles of text that distinguish between different kinds of information. Here are some examples of these styles, and an explanation of their meaning.
+
+Code words in text, database table names, folder names, filenames, file extensions, pathnames, dummy URLs, user input, and Twitter handles are shown as follows: "A Spring MVC app is marked by the `@Controller` annotation."
+
+A block of code is set as follows:
+
+[source,java]
+----
+include::https://raw.githubusercontent.com/learning-spring-boot/learning-spring-boot-code/master/ch1/app.groovy[]
+----
+
+When we wish to draw your attention to a particular part of a code block, the relevant lines or items are set in bold:
+
+[source,java,subs="normal"]
+----
+@RestController
+class App {
+    *@RequestMapping("/")*
+    def home() {
+        "Hello, world!"
+    }
+}
+----
+
+Any command-line input or output is written as follows:
+
+----
+$ spring run app.groovy
+----
+     
+*New terms* and *important words* are shown in bold. Words that you see on the screen, in menus or dialog boxes for example, appear in the text like this: "clicking the `Next' button moves you to the next screen".
+
+NOTE: Warnings or important notes appear in a box like this.
+
+TIP: Tips and tricks appear like this.
+
+==== Reader feedback
+
+Feedback from our readers is always welcome. Let us know what you think about this book—what you liked or may have disliked. Reader feedback is important for us to develop titles that you really get the most out of.
+To send us general feedback, simply send an e-mail to feedback@packtpub.com, and mention the book title via the subject of your message.
+ 
+If there is a topic that you have expertise in and you are interested in either writing or contributing to a book, see our author guide on http://www.packtpub.com/authors.
+
+==== Customer support
+
+Now that you are the proud owner of a Packt book, we have a number of things to help you to get the most from your purchase.
+
+===== Downloading the example code
+
+You can download the example code files for all Packt books you have purchased from your account at http://www.packtpub.com. If you purchased this book elsewhere, you can visit http://www.packtpub.com/support and register to have the files e-mailed directly to you.
+
+===== Downloading the color images of this book
+
+We also provide you a PDF file that has color images of the screenshots/diagrams used in this book. The color images will help you better understand the changes in the output. You can download this file from: http://www.packtpub.com/sites/default/files/downloads/3021OS_ColorImages.pdf.
+
+==== Errata
+
+Although we have taken every care to ensure the accuracy of our content, mistakes do happen. If you find a mistake in one of our books—maybe a mistake in the text or the code—we would be grateful if you would report this to us. By doing so, you can save other readers from frustration and help us improve subsequent versions of this book. If you find any errata, please report them by visiting http://www.packtpub.com/submit-errata, selecting your book, clicking on the errata submission form link, and entering the details of your errata. Once your errata are verified, your submission will be accepted and the errata will be uploaded on our website, or added to any list of existing errata, under the Errata section of that title. Any existing errata can be viewed by selecting your title from http://www.packtpub.com/support.
+
+==== Piracy
+
+Piracy of copyright material on the Internet is an ongoing problem across all media. At Packt, we take the protection of our copyright and licenses very seriously. If you come across any illegal copies of our works, in any form, on the Internet, please provide us with the location address or website name immediately so that we can pursue a remedy.
+
+Please contact us at copyright@packtpub.com with a link to the suspected pirated material.
+
+We appreciate your help in protecting our authors, and our ability to bring you valuable content.
+
+==== Questions
+
+You can contact us at questions@packtpub.com if you are having a problem with any aspect of the book, and we will do our best to address it.

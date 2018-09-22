@@ -1,0 +1,22 @@
+= My Book Title Goes Here
+:author: My Name Goes Here
+:toc: right
+:toclevels: 6
+:doctype: book
+
+image::http://greglturnquist.com/wp-content/uploads/2016/09/A001_MockupCover_Normal.png[]
+
+_My Book Title_ is aimed at...
+
+TIP: Please enjoy my https://github.com/gregturn/packt-book-template[awesome blogging] as I write this book!
+
+(C) YYYY Packt Publishing Ltd., All Rights Reserved
+
+include::A001_foreword_1stdraft.adoc[]
+
+include::A001_preface_1stdraft.adoc[]
+
+include::A001_01_1stdraft.adoc[]
+
+include::A001_02_1stdraft.adoc[]
+

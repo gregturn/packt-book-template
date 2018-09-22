@@ -1,0 +1,36 @@
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::  (v2.0.0.BUILD-SNAPSHOT)
+
+2017-08-02 15:34:22.374  INFO 89566 --- [           main] c.g.l.LearningSpringBootApplication      : Starting LearningSpringBootApplication on retina with PID 89566 (/Users/gturnquist/personal/learning-spring-boot-2nd-edition-code/1/part1/build/classes/java/main started by gturnquist in /Users/gturnquist/personal/learning-spring-boot-2nd-edition-code)
+2017-08-02 15:34:22.377 DEBUG 89566 --- [           main] c.g.l.LearningSpringBootApplication      : Running with Spring Boot v2.0.0.BUILD-SNAPSHOT, Spring v5.0.0.RC3
+2017-08-02 15:34:22.378  INFO 89566 --- [           main] c.g.l.LearningSpringBootApplication      : No active profile set, falling back to default profiles: default
+2017-08-02 15:34:22.433  INFO 89566 --- [           main] .r.c.ReactiveWebServerApplicationContext : Refreshing org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext@56a6d5a6: startup date [Wed Aug 02 15:34:22 CDT 2017]; root of context hierarchy
+2017-08-02 15:34:23.717  WARN 89566 --- [           main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2017-08-02 15:34:23.815  WARN 89566 --- [           main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2017-08-02 15:34:23.953  WARN 89566 --- [           main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-08-02 15:34:24.094  INFO 89566 --- [           main] o.s.w.r.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
+2017-08-02 15:34:24.094  INFO 89566 --- [           main] o.s.w.r.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.reactive.resource.ResourceWebHandler]
+2017-08-02 15:34:24.125  INFO 89566 --- [           main] o.s.w.r.r.m.a.ControllerMethodResolver   : Looking for @ControllerAdvice: org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext@56a6d5a6: startup date [Wed Aug 02 15:34:22 CDT 2017]; root of context hierarchy
+2017-08-02 15:34:24.501  INFO 89566 --- [      Thread-12] o.s.b.a.mongo.embedded.EmbeddedMongo     : note: noprealloc may hurt performance in many applications
+2017-08-02 15:34:24.858  INFO 89566 --- [      Thread-12] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2017-08-02T15:34:24.858-0500 I NETWORK  [initandlisten] waiting for connections on port 65485
+2017-08-02 15:34:24.858  INFO 89566 --- [           main] d.f.embed.process.runtime.Executable     : start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@138a7441
+2017-08-02 15:34:24.908  INFO 89566 --- [           main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:65485], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-08-02 15:34:24.908  INFO 89566 --- [           main] org.mongodb.driver.cluster               : Adding discovered server localhost:65485 to client view of cluster
+2017-08-02 15:34:25.007  INFO 89566 --- [      Thread-12] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2017-08-02T15:34:25.006-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:65491 #1 (1 connection now open)
+2017-08-02 15:34:25.038  INFO 89566 --- [localhost:65485] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:65485
+2017-08-02 15:34:25.040  INFO 89566 --- [localhost:65485] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:65485, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 2]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=1066234}
+2017-08-02 15:34:25.041  INFO 89566 --- [localhost:65485] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2017-08-02 15:34:25.145  INFO 89566 --- [           main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:65485], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-08-02 15:34:25.145  INFO 89566 --- [           main] org.mongodb.driver.cluster               : Adding discovered server localhost:65485 to client view of cluster
+2017-08-02 15:34:25.153  INFO 89566 --- [localhost:65485] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:65485
+2017-08-02 15:34:25.153  INFO 89566 --- [localhost:65485] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:65485, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 2]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=359764}
+2017-08-02 15:34:25.153  INFO 89566 --- [localhost:65485] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2017-08-02 15:34:25.486  INFO 89566 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-02 15:34:25.556  INFO 89566 --- [ctor-http-nio-1] r.ipc.netty.tcp.BlockingNettyContext     : Started HttpServer on /0:0:0:0:0:0:0:0:8080
+2017-08-02 15:34:25.558  INFO 89566 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port(s): 8080
+2017-08-02 15:34:25.607  INFO 89566 --- [           main] c.g.l.LearningSpringBootApplication      : Started in 3.617 seconds (JVM running for 4.059)

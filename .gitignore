@@ -1,0 +1,10 @@
+A001*html
+index*html
+*.jar
+*.odt.styles
+*.fodt
+.~lock*
+*.csv
+*.tar.gz
+*.keystore
+.DS_Store
